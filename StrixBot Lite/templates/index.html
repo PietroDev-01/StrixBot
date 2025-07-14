@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrixBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="header-container">
+        <img src="{{ url_for('static', filename='StrixBot_Logo4.svg') }}" alt="StrixBot Logo" class="logo">
+        <button id="theme-switcher">☀️ / 🌙</button>
+    </div>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <div id="image-preview-container"></div>
+        <form id="chat-form">
+            <label for="image-input" class="file-input-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            </label>
+            <input type="file" id="image-input" name="image" accept="image/*">
+            <textarea id="prompt-input" name="prompt" placeholder="Analise estes dados..." required rows="1"></textarea>
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
