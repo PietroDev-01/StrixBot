@@ -1,0 +1,13 @@
+# Ambiente Virtual do Python
+"StrixBot Lite/venv/"
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de variáveis de ambiente (segurança)
+.env
+*.env
+
+# Configurações do VSCode
+.vscode/
